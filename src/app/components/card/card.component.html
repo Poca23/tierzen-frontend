@@ -1,0 +1,35 @@
+<div class="page">
+    <header class="header">
+        <span class="logo">🪪 TierZen</span>
+        <span class="slogan">Le tiers payant, sans stress</span>
+    </header>
+
+    <main class="container">
+        <div class="card" *ngIf="adherent">
+
+            <div class="card-header">
+                <span class="mutuelle">{{ adherent.mutuelle }}</span>
+                <span class="badge">Tiers Payant</span>
+            </div>
+
+            <div class="card-body">
+                <p class="label">Adhérent</p>
+                <p class="name">{{ adherent.prenom }} {{ adherent.nom }}</p>
+
+                <p class="label">Numéro adhérent</p>
+                <p class="number">{{ adherent.numeroAdherent }}</p>
+
+                <p class="label">Valide jusqu'au</p>
+                <p class="date">{{ dateAffichee }}</p>
+            </div>
+
+            <div class="card-qr">
+                <qrcode [qrdata]="qrData" [width]="160" [errorCorrectionLevel]="'M'" />
+                <p class="qr-hint">Scanner en pharmacie</p>
+            </div>
+
+        </div>
+
+        <p class="loading" *ngIf="!adherent">Chargement de la carte...</p>
+    </main>
+</div>
