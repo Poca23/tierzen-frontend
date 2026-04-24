@@ -13,7 +13,7 @@ export interface Adherent {
 
 @Injectable({ providedIn: 'root' })
 export class AdherentService {
-  private apiUrl = 'http://localhost:8080/api/adherent';
+  private apiUrl = 'http://[2001:bc8:711:447f:dc00:1ff:fe0a:9edb]:8080/api/adherent';
 
   constructor(private http: HttpClient) {}
 
