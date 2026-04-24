@@ -8,7 +8,7 @@ export interface Adherent {
   prenom: string;
   numeroAdherent: string;
   mutuelle: string;
-  dateValidite: string | number[] | any;
+  dateValidite: any;
 }
 
 @Injectable({ providedIn: 'root' })

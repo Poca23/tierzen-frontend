@@ -1,13 +1,12 @@
 import { TestBed } from '@angular/core/testing';
+import { AdherentService } from './adherent.service';
 
-import { Adherent } from './adherent';
-
-describe('Adherent', () => {
-  let service: Adherent;
+describe('AdherentService', () => {
+  let service: AdherentService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(Adherent);
+    service = TestBed.inject(AdherentService);
   });
 
   it('should be created', () => {

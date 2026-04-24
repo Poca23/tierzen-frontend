@@ -5,6 +5,6 @@ import { CardComponent } from './components/card/card.component';
   selector: 'app-root',
   standalone: true,
   imports: [CardComponent],
-  template: '<app-card />',
+  templateUrl: './app.html',
 })
 export class AppComponent {}
