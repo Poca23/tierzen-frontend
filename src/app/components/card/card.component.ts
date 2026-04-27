@@ -40,7 +40,7 @@ export class CardComponent implements OnInit {
           nom: 'Naudin',
           prenom: 'Claire',
           numeroAdherent: 'HM-2026-00142',
-          mutuelle: 'Harmonie Mutuelle',
+          mutuelle: 'TierZen',
           dateValidite: '2026-12-31',
         };
         this.dateAffichee = this.formatDate(this.adherent.dateValidite);
