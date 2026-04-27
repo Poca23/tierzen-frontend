@@ -21,10 +21,14 @@ export class MobileService {
 
   // Partage la carte familiale
   async partager(adherent: Adherent): Promise<void> {
-    await Share.share({
-      title: 'Ma carte tiers payant TierZen',
-      text: `${adherent.prenom} ${adherent.nom} — ${adherent.numeroAdherent} — ${adherent.mutuelle}`,
-      dialogTitle: 'Partager ma carte',
-    });
+    try {
+      await Share.share({
+        title: 'Ma carte TierZen',
+        text: `${adherent.prenom} ${adherent.nom} — ${adherent.numeroAdherent}`,
+        dialogTitle: 'Partager ma carte',
+      });
+    } catch {
+      console.info('Partage non disponible sur ce navigateur — fonctionnel sur mobile');
+    }
   }
 }
