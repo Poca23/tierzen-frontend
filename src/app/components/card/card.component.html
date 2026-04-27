@@ -23,6 +23,11 @@
                 <qrcode [qrdata]="qrData" [width]="160" [errorCorrectionLevel]="'M'" />
                 <p class="qr-hint">Scanner en pharmacie</p>
             </div>
+            <div class="card-actions">
+                <button class="btn-share" (click)="partager()">
+                    📤 Partager ma carte
+                </button>
+            </div>
         </div>
         } @else {
         <p class="loading">Chargement de la carte...</p>

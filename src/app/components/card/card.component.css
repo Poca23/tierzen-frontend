@@ -122,3 +122,24 @@
   padding: 40px;
   color: var(--color-muted, #6f6f6f);
 }
+
+.card-actions {
+  padding: 16px 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-share {
+  background: var(--color-accent, #ef7c00);
+  color: white;
+  border: none;
+  border-radius: var(--radius-btn, 50px);
+  padding: 10px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-share:hover {
+  background: #d96b00;
+}
