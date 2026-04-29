@@ -1,3 +1,5 @@
+## README.md frontend — version complète mise à jour
+
 # 🪪 TierZen — Frontend
 
 Interface Angular pour la carte tiers payant digitale **TierZen** — _"Le tiers payant, sans stress"_
@@ -32,15 +34,26 @@ ng serve
 
 ```
 tierzen-frontend/
+├── public/
+│   ├── favicon.ico
+│   ├── favicon_tierzen.png    # Icône PWA 512×512
+│   ├── logo_tierzen.png       # Logo horizontal header
+│   ├── manifest.webmanifest   # PWA installable
+│   ├── screenshot-wide.png    # Screenshot desktop PWA
+│   └── screenshot-mobile.png  # Screenshot mobile PWA
 ├── src/
 │   ├── app/
-│   │   ├── card/              # Composant carte digitale
+│   │   ├── components/
+│   │   │   └── card/
+│   │   │       ├── card.component.ts
+│   │   │       ├── card.component.html
+│   │   │       └── card.component.css
 │   │   ├── services/
 │   │   │   ├── adherent.service.ts   # Appels API REST
 │   │   │   └── mobile.service.ts     # Capacitor Preferences + Share
 │   │   └── app.component.ts
-│   └── styles.css             # Charte graphique globale
-├── public/
+│   ├── index.html
+│   └── styles.css
 ├── angular.json
 └── package.json
 ```
@@ -55,6 +68,7 @@ tierzen-frontend/
 | 2   | 🔄 Mise à jour temps réel | Appel API REST backend                             |
 | 3   | 💾 Accès hors-ligne       | Capacitor Preferences — fallback local             |
 | 4   | 📤 Partage familial       | Capacitor Share — natif mobile / clipboard desktop |
+| 5   | 📲 PWA installable        | Manifest + icônes + screenshots                    |
 
 ---
 
@@ -124,7 +138,7 @@ Le partage natif (Web Share API) nécessite **HTTPS**.
 - ✅ **Modulaire** — `AdherentService` / `MobileService` / `CardComponent`
 - ✅ **Léger** — pas de dépendances inutiles
 - ✅ **Sécurisé** — gestion des erreurs HTTP, fallback hors-ligne
-- ✅ **Mobile-first** — Capacitor + styles responsive
+- ✅ **Mobile-first** — Capacitor + styles responsive + logo centré mobile
 - ✅ **Bonnes pratiques Git** — commits conventionnels, branches, README
 
 ---
