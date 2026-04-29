@@ -24,20 +24,25 @@
 
 .header {
   background: var(--color-primary, #9c0a0f);
-  color: white;
-  padding: 16px 24px;
+  padding: 12px 24px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.logo {
-  font-size: 1.2rem;
-  font-weight: 700;
+.header-logo {
+  height: 80px;
+  width: auto;
+  display: block;
 }
-.slogan {
-  font-size: 0.85rem;
-  opacity: 0.85;
+
+@media (max-width: 600px) {
+  .header {
+    justify-content: center;
+  }
+  .header-logo {
+    height: 60px;
+  }
 }
 
 .container {
